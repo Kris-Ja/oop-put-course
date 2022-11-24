@@ -30,6 +30,9 @@ class Euro : public Currency {
 		float amount;
 		FakeCantor cantor;
 	public:
+		float DollarExchangeRate(){
+			return cantor.EuroToRate("USD");
+		}
 		std::string Balance(){
 			return std::to_string(amount);
 		}
@@ -51,7 +54,7 @@ class Euro : public Currency {
 			}
 		}
 
-		Euro *SubstractedCurrency(float value, std::string currency){
+		Euro *SubtractedCurrency(float value, std::string currency){
 			if(currency == "EUR"){
 				Euro* r = new Euro(amount - value);
 				return r;		

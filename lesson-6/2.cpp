@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<string>
 
 class Number{
 	public:
@@ -15,9 +16,9 @@ class Logarithm : public Number{
 		}
 		Logarithm(double base, double argument){
 			if(base<=0 || base==1)
-				throw 1;
+				throw "Wrong base of logarithm - " + std::to_string(base);
 			if(argument<=0)
-				throw 0;
+				throw "Wrong argument of logarithm - " + std::to_string(argument);
 			this->base=base;
 			this->argument=argument;
 		}
@@ -30,21 +31,15 @@ int main(){
 	try{
 		Logarithm log1 = Logarithm(base1, argument1);
 		std::cout<<"Logarithm of 8 to the base 2 is "<<log1.doubleValue()<<"\n";
-	}catch(int wr_base){
-		if(wr_base)
-			std::cout<<"Error: Wrong base of logarithm - " <<base1<<"\n";
-		else 
-			std::cout<<"Error: Wrong argument of logarithm - " <<argument1<<"\n";
+	}catch(std::string msg){
+		std::cout<<"Error: "<<msg<<"\n";
 	}
 
 	double base2=-1, argument2=8;
 	try{
 		Logarithm log2 = Logarithm(base2, argument2);
 		std::cout<<"Logarithm of 8 to the base -1 is "<<log2.doubleValue()<<"\n";
-	}catch(int wr_base){
-		if(wr_base)
-			std::cout<<"Error: Wrong base of logarithm - " <<base2<<"\n";
-		else 
-			std::cout<<"Error: Wrong argument of logarithm - " <<argument2<<"\n";
+	}catch(std::string msg){
+		std::cout<<"Error: "<<msg<<"\n";
 	}
 }	

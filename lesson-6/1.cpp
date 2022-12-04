@@ -10,8 +10,8 @@ class NumberUtils{
 		int min(){
 			return a<b?a:b;
 		}
-		int avg(){
-			return (a+b)/2;
+		float avg(){
+			return (a+b)/(float)2;
 		}
 		NumberUtils(int a, int b){
 			this->a=a;

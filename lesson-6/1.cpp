@@ -13,7 +13,7 @@ class NumericalRelations{
 		float avg(){
 			return (a+b)/(float)2;
 		}
-		NumberUtils(int a, int b){
+		NumericalRelations(int a, int b){
 			this->a=a;
 			this->b=b;
 		}

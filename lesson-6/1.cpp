@@ -1,6 +1,6 @@
 #include<iostream>
 
-class NumberUtils{
+class NumericalRelations{
 	private:
 		int a,b;
 	public:
@@ -21,6 +21,6 @@ class NumberUtils{
 
 int main(){
 	int a=3,b=7;
-	std::cout<<"max(3,7) = "<<NumberUtils(3,7).max()<<"\nmin(3,7) = "<<NumberUtils(3,7).min()<<"\navg(3,7) = "<<NumberUtils(3,7).avg()<<"\n";
+	std::cout<<"max(3,7) = "<<NumericalRelations(3,7).max()<<"\nmin(3,7) = "<<NumericalRelations(3,7).min()<<"\navg(3,7) = "<<NumericalRelations(3,7).avg()<<"\n";
 }
 		

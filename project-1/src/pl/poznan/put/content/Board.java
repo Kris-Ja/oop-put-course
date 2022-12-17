@@ -8,16 +8,16 @@ public class Board
 	private final Stone empty_stone = new Stone();
 
 	private void removeGroup(Coordinates coordinates){
-		List<Coordinates> to_remove=points[coordinates.x][coordinates.y].group().listOfCoordinates();
+		List<Coordinates> to_remove=points[coordinates.x()][coordinates.y()].group().listOfCoordinates();
 		to_remove.forEach((Coordinates coor) -> {this.removeStone(coor);});
 	}
 
 	private Stone point(Coordinates coordinates){
-		return this.points[coordinates.x][coordinates.y];
+		return this.points[coordinates.x()][coordinates.y()];
 	}
 
 	private void putStone(Coordinates coordinates, Stone stone){
-		this.points[coordinates.x][coordinates.y] = stone;
+		this.points[coordinates.x()][coordinates.y()] = stone;
 	}
 
 	private void removeStone(Coordinates coordinates){

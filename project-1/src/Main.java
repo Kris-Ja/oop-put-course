@@ -1,3 +1,4 @@
+package GoGame;
 import java.util.Scanner;
 
 public class Main

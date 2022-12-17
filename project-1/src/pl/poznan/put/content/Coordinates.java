@@ -1,3 +1,4 @@
+package GoGame;
 import java.util.ArrayList;
 import java.util.List;
 

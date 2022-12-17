@@ -1,3 +1,5 @@
+package GoGame;
+
 public class Stone
 {
 	private final State state;

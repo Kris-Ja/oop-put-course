@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main
 {
 	public static void main(String args[]){
-		Board board = new Board();
+		Board board = new Goban();
 		String pattern = new String("(?i)([1-9][a-s])|(1[0-9][a-s])|([a-s][1-9])|([a-s]1[0-9])|(pas?s)|(exit)");
 		State white_state = new State("white");
 		State black_state = new State("black");

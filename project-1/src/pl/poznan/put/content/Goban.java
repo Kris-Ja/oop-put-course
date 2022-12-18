@@ -66,7 +66,7 @@ public class Goban implements Board
 		Group[] own_groups = new Group[4];
 		int empty_neighbours=0;
 
-		if(last_removed!=null && placement.equal(last_removed)){
+		if(last_removed!=null && placement.equals(last_removed)){
 			boolean ko = true;
 			for(Coordinates neighbours : placement.neighbours())if(this.point(neighbours).state().empty()==true)ko=false;
 			if(ko==true)throw new IllegalPlacementException("Illegal stone placement: Ko rule\n");

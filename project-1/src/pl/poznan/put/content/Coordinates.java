@@ -15,7 +15,7 @@ public class Coordinates
 		if(y<18)list.add(new Coordinates(x, y+1));
 		return list;
 	}
-	public boolean equal(Coordinates b){
+	public boolean equals(Coordinates b){
 		if(this.x==b.x && this.y==b.y)return true;
 		return false;
 	}
